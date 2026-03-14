@@ -1,9 +1,69 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36" version="26.2.12">
   <diagram name="第 1 页" id="RnHMNZTRhxmxvyKDGjgK">
-    <mxGraphModel>
+    <mxGraphModel dx="1115" dy="662" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="title" value="下一代几何感知物理信息神经网络 (PINN) 求解框架技术路线图" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="113.5" y="20" width="600" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bg_container" value="一、 研究背景：传统方法瓶颈与现有模型局限" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#444444;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="747" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bg_1" value="维度灾难&lt;br&gt;指数级计算成本" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" vertex="1" parent="bg_container">
+          <mxGeometry x="20" y="40" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bg_2" value="训练不稳定性&lt;br&gt;损失不平衡/梯度病态" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" vertex="1" parent="bg_container">
+          <mxGeometry x="200" y="40" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bg_3" value="泛化能力弱&lt;br&gt;“一案一算”限制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" vertex="1" parent="bg_container">
+          <mxGeometry x="380" y="40" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bg_4" value="几何混叠&lt;br&gt;非结构化网格信息丢失" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b85450;fontSize=11;" vertex="1" parent="bg_container">
+          <mxGeometry x="570" y="40" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="content_title" value="二、 核心研究内容：四大技术层面协同创新" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_a" value="【维度扩展层】&lt;br&gt;DFS-PINN 架构&lt;br&gt;&lt;hr&gt;输入解耦 + 1D子网络&lt;br&gt;JVP 前向模式微分" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_b" value="【梯度调控层】&lt;br&gt;双重梯度协同优化&lt;br&gt;&lt;hr&gt;分层梯度增强 (HGE)&lt;br&gt;NTK 动态权重分配" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="232" y="260" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_c" value="【工况自适应层】&lt;br&gt;Taylor-MoE 专家系统&lt;br&gt;&lt;hr&gt;线性/非线性显式分解&lt;br&gt;空间动态计算路由" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="424" y="260" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mod_d" value="【几何建模层】&lt;br&gt;SpecGeo-Attention&lt;br&gt;&lt;hr&gt;多尺度几何编码注入&lt;br&gt;频谱保持特征重构" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="617" y="260" width="170" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_title" value="三、 研究目标" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="348.5" y="410" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="obj_box" value="复杂度降至线性 O(N) | 提升多尺度物理表达 | 彻底解决病态收敛 | 实现跨参数秒级推理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="747" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="final_box" value="&lt;b&gt;总目标：下一代智能计算范式&lt;/b&gt;&lt;br&gt;工业级高保真流动模拟系统" style="shape=component;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="253.5" y="520" width="320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="case_1" value="翼型绕流&lt;br&gt;(跨声速激波捕捉)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#f5f5f5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="60" y="525" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="case_2" value="汽车空气动力学&lt;br&gt;(工业级基准验证)" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fillColor=#f5f5f5;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="647" y="525" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="line_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="bg_container" target="mod_b">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line_2" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" source="obj_box" target="final_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;dashed=1;" edge="1" parent="1" source="mod_a" target="obj_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="line_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;dashed=1;" edge="1" parent="1" source="mod_d" target="obj_box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
